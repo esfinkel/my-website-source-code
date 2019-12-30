@@ -147,3 +147,8 @@ ul.navbar-nav {
   transition: .3s ease-out;
   -webkit-transition: 0.3s ease-out;
 }
+
+.jumbotron {
+  background-color: #0808082c;
+  color: black;
+}
