@@ -65,6 +65,7 @@ class App extends Component {
         </Sidebar>
         <div className="App-header">
           <div id="main-content">
+            {/* <div id="toggle-btn" onClick={() => this.onSetSidebarOpen(!this.state.sidebarOpen)}><span></span><span></span><span></span></div> */}
             <div id="toggle-btn" onClick={() => this.onSetSidebarOpen(!this.state.sidebarOpen)}><span></span><span></span><span></span></div>
             <div id="page-content">
             <Switch>
@@ -88,41 +89,3 @@ class App extends Component {
 
 export default App;
 
-
-// import React from 'react';
-
-// import './App.css';
-
-// // import Home from './views/home';
-// // import Contact from './views/contact';
-
-
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//       {/* <Route path='/' component={App}>
-//         <IndexRoute component={Home} />
-//         <Route path='contact' component={Contact} />
-//         <Route path='*' component={Home} />
-//       </Route> */}
-//         Hello!
-//         {/* <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a> */}
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;

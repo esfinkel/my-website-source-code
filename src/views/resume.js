@@ -2,11 +2,12 @@ import React from 'react';
 // import { Document, Page } from 'react-pdf'; cannot load
 // import { PDFReader } from 'react-read-pdf';    "bad pdf structure"
 // don't use iFrames lol
+// something from bootstrap?
 
 class Resume extends React.Component {
     render() {
         return (
-    <div>
+    <div id="resume">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 
         <h2>Resume</h2>

@@ -25,6 +25,14 @@ class Projects extends React.Component {
                 <div style={{color: "black"}}>
                     <CardColumns>
                         <MyCard
+                            url="https://github.com/esfinkel/Battleship-2019"
+                            imgSrc={require("../img/project_cards/battleship.png")}
+                            title="Battleship"
+                            text='Play "Battleship" directly from your command-line shell! Implemented in OCaml with two classmates.'
+                            lastUpdated="December 9, 2019"
+                            extra="Now with customizable boards and ships!"
+                        />
+                        <MyCard
                             url="https://esfinkel.github.io/netprint-finder"
                             imgSrc={require("../img/project_cards/netprint-web.png")}
                             title="Netprint Finder (web app)"

@@ -2,6 +2,9 @@ import React from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Image from 'react-bootstrap/Image';
 
+// todo https://react-bootstrap.github.io/components/accordion/ for organization
+// https://react-bootstrap.github.io/components/progress/ for scroll progress
+
 class Bonus extends React.Component {
     render() {
       return (
@@ -25,7 +28,7 @@ class Bonus extends React.Component {
                 <Image src={require("../img/bonus/recital.jpg")} style={{height: 200}} roundedCircle />
                 <br/>
                 </a>
-                At Cornell, I play in the <a href="https://www.cuorchestra.org">Symphony Orchestra</a> and in the Percussion Ensemble. The orchestra's concerts are typically <a href="https://www.cornell.edu/video/contributor/cornell-symphony-orchestra">recorded and posted online</a>. In January 2019, we had the privilege and pleasure of performing in <a href="https://www.youtube.com/watch?v=I1XubPdPIaI&feature=youtu.be&fbclid=IwAR1n4x1kFKvFdOuvZnjaLLUWzGPvNdgIekzveWjoAlIMsxxwbdGlVOb3sBA">Taipei, Taiwan</a> with the Taipei Symphony Orchestra.
+                At Cornell, I play in the <a href="https://www.cuorchestra.org">Symphony Orchestra</a> and in the Percussion Ensemble. The orchestra's concerts are typically <a href="https://www.cornell.edu/video/contributor/cornell-symphony-orchestra">recorded and posted online</a>. In January 2019, we had the privilege and pleasure of <a href="https://www.youtube.com/watch?v=I1XubPdPIaI&feature=youtu.be&fbclid=IwAR1n4x1kFKvFdOuvZnjaLLUWzGPvNdgIekzveWjoAlIMsxxwbdGlVOb3sBA">performing in Taipei, Taiwan</a> with the Taipei Symphony Orchestra.
                 <br/>
             <Image src={require("../img/bonus/taipei_symph_reh.jpg")} style={{height: 200}} roundedCircle />
             &nbsp;
@@ -33,7 +36,7 @@ class Bonus extends React.Component {
         </Jumbotron>
         <Jumbotron className="jumbotron">
             <h3>Pets</h3>
-            <p>My darling Luna currently resides in Evanston, IL, with my parents.</p>
+            <p>Our darling Luna currently resides in Evanston, IL, with my parents.</p>
             <Image src={require("../img/bonus/dog.jpg")} style={{height: 200}} roundedCircle />
         </Jumbotron>
         <Jumbotron className="jumbotron">
