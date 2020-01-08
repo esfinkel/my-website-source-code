@@ -30,9 +30,9 @@ class Bonus extends React.Component {
                 </a>
                 At Cornell, I play in the <a href="https://www.cuorchestra.org">Symphony Orchestra</a> and in the Percussion Ensemble. The orchestra's concerts are typically <a href="https://www.cornell.edu/video/contributor/cornell-symphony-orchestra">recorded and posted online</a>. In January 2019, we had the privilege and pleasure of <a href="https://www.youtube.com/watch?v=I1XubPdPIaI&feature=youtu.be&fbclid=IwAR1n4x1kFKvFdOuvZnjaLLUWzGPvNdgIekzveWjoAlIMsxxwbdGlVOb3sBA">performing in Taipei, Taiwan</a> with the Taipei Symphony Orchestra.
                 <br/>
-            <Image src={require("../img/bonus/taipei_symph_reh.jpg")} style={{height: 200}} roundedCircle />
+            <Image src={require("../img/bonus/taipei_symph_reh.jpg")} style={{height: 200}} rounded />
             &nbsp;
-            <Image src={require("../img/bonus/taipei_symph.jpg")} style={{height: 200}} roundedCircle />
+            <Image src={require("../img/bonus/taipei_symph.jpg")} style={{height: 200}} rounded />
         </Jumbotron>
         <Jumbotron className="jumbotron">
             <h3>Pets</h3>
@@ -44,9 +44,9 @@ class Bonus extends React.Component {
             <p>
                 I've been constructing <a href="https://en.wikipedia.org/wiki/Constructed_language">conlangs</a> since at least 2012.
             </p>
-            <Image src={require("../img/bonus/vocab.png")} style={{height: 200}} roundedCircle />
+            <Image src={require("../img/bonus/vocab.png")} style={{height: 200}} rounded fluid />
             &nbsp;
-            <Image src={require("../img/bonus/grammar.png")} style={{height: 200}} roundedCircle />
+            <Image src={require("../img/bonus/grammar.png")} style={{height: 200}} rounded />
         </Jumbotron>
       </div>
     );}

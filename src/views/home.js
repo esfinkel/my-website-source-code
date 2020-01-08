@@ -7,7 +7,6 @@ class Home extends React.Component {
   render() {
     return (
     <div id="home">
-      <img src={require("../img/pointer.png")} alt="Click square to open navigation sidebar."/>
       <h2>Home</h2>
       <br/>
       <p>Hello!</p>

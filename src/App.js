@@ -1,6 +1,6 @@
 /* Import statements */
 import React, { Component } from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Home from './views/home';
 import Contact from './views/contact';
@@ -8,27 +8,17 @@ import Projects from './views/projects';
 import Resume from './views/resume';
 import Bonus from './views/bonus';
 import err from './views/e404';
-import Sidebar from "react-sidebar";
-import botSquiq from './img/squig-horz.png'
+import botSquiq from './img/squig-horz-blue.png'
 
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
 
+// import Form from 'react-bootstrap/Form'
+// import FormControl from 'react-bootstrap/FormControl'
+// import Button from 'react-bootstrap/Button'
 
 /* App component */
 class App extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      sidebarOpen: false
-    };
-    this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
-  }
-
-  onSetSidebarOpen(open) {
-    this.setState({ sidebarOpen: open });    
-    document.getElementById("toggle-btn").classList.toggle('moved');
-    document.getElementById("main-content").classList.toggle('moved');
-  }
 
   with_params_to_pass(s) {
     var urlParams = new URLSearchParams(window.location.search);
@@ -41,32 +31,37 @@ class App extends Component {
   render() {
     return (
       <Router>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossOrigin="anonymous"></link>
+        {/* this stylesheet is actually for non-react bootstrap! remember to delete */}
+      {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossOrigin="anonymous"></link> */}
+      <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous"
+      />
       <div>
-        <Sidebar
-          children={<div></div>}
-          sidebar={
-            <nav className="navbar navbar-light">
-              <ul className="nav navbar-nav">
-                {/* Link components are used for linking to other views */}
-                <Link to={this.with_params_to_pass("/")}><li>Home</li></Link>
-                <Link to={this.with_params_to_pass("/contact")}><li>Contact</li></Link>
-                <Link to={this.with_params_to_pass("/projects")}><li>Projects</li></Link>
-                <Link to={this.with_params_to_pass("/resume")}><li>Resume</li></Link>
-                <Link to={this.with_params_to_pass("/bonus")}><li>Bonus</li></Link>
-                {/* <Link to="/err"><li>Error<small><br/>(for testing)</small></li></Link> */}
-              </ul>
-            </nav>
-          }
-          open={this.state.sidebarOpen}
-          onSetOpen={this.onSetSidebarOpen}
-          styles={{ sidebar: { background: "#004d7ce0", width: "150px" } }}
-        >
-        </Sidebar>
+
+        <Navbar bg="primary" variant="dark">
+          <Navbar.Brand href={this.with_params_to_pass("/")}>esfinkel.me</Navbar.Brand>
+          <Nav className="mr-auto">
+              <Nav.Link href={this.with_params_to_pass("/")}>Home</Nav.Link>
+              <Nav.Link href={this.with_params_to_pass("/contact")}>Contact</Nav.Link>
+              <Nav.Link href={this.with_params_to_pass("/projects")}>Projects</Nav.Link>
+              <Nav.Link href={this.with_params_to_pass("/resume")}>Resume</Nav.Link>
+              <Nav.Link href={this.with_params_to_pass("/bonus")}>Bonus</Nav.Link>
+              {/* <Nav.Link href={this.with_params_to_pass("/err")}>Error (for testing)</Nav.Link> */}
+          </Nav>
+          {/* search bar! */}
+          {/* <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-light">Search</Button>
+          </Form> */}
+        </Navbar>
+
+
         <div className="App-header">
+          <br/>
           <div id="main-content">
-            {/* <div id="toggle-btn" onClick={() => this.onSetSidebarOpen(!this.state.sidebarOpen)}><span></span><span></span><span></span></div> */}
-            <div id="toggle-btn" onClick={() => this.onSetSidebarOpen(!this.state.sidebarOpen)}><span></span><span></span><span></span></div>
             <div id="page-content">
             <Switch>
               <Route exact path="/" component={Home}/>

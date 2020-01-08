@@ -41,11 +41,6 @@ div#main-content {
   font-size: 20px;
   position: relative;
   left: 0px;
-
-  transition: .3s ease-out;
-  -webkit-transition: 0.3s ease-out;
-} div#main-content.moved {
-  left: 150px;
 }
 
 div#page-content {
@@ -82,60 +77,6 @@ a.quietLink {
 } a.quietLink:hover {
   text-decoration: none;
   color: rgb(30, 25, 54);
-}
-
-
-#toggle-btn {
-  position: fixed;
-  z-index:1000;
-  width: 45px;
-  padding: 8px 8px;
-  margin-right: 10px;
-  left: 0px;
-  background: #e1e1e1;
-  top: 30px;
-  cursor: pointer;
-  transition: .3s ease-out;
-  -webkit-transition: 0.3s ease-out;
-} #toggle-btn.moved {
-  left: 150px;
-} #toggle-btn span {
-  width: 30px;
-  height: 2px;
-  background: #444;
-  display: block;
-  margin-bottom: 6px
-} #toggle-btn span:last-child {
-  margin-bottom: 0;
-}
-
-ul.navbar-nav {
-  list-style: none;
-  margin-top: 10px;
-}
-
-.navbar-nav li {
-  -webkit-user-select: none; /* Safari */ -moz-user-select: none; /* Firefox */ -ms-user-select: none; /* IE10+/Edge */ user-select: none; /* Standard */
-  list-style-type: none;
-  width: 100%;
-  line-height: 20px;
-  /* height: 40px; */
-  padding: 10px 15px;
-  box-sizing: border-box;
-  border-bottom: 1px solid gray;
-  font-size: 20px;
-} .navbar-nav li:hover {
-  background: #3a3acce0;
-  font-size: 22px;
-  color: #e1e1e1;
-  text-decoration: none;
-
-} .navbar-nav a {
-  color: #e1e1e1;
-  text-decoration: none;
-} .navbar-nav a:hover {
-  color: #e1e1e1;
-  text-decoration: none;
 }
 
 
