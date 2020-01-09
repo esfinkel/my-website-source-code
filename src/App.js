@@ -22,9 +22,7 @@ class App extends Component {
 
   with_params_to_pass(s) {
     var urlParams = new URLSearchParams(window.location.search);
-    // console.log(urlParams.get("taggedness"));
-    // return s;
-    if (urlParams.get("taggedness") === "untagged") return s+"?taggedness=untagged";
+    if (urlParams.get("tracked") === "false") return s+"?tracked=false";
     else return s
   }
 
