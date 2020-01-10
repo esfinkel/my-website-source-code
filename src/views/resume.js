@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'react-bootstrap/Image';
 // import { Document, Page } from 'react-pdf'; cannot load
 // import { PDFReader } from 'react-read-pdf';    "bad pdf structure"
 // don't use iFrames lol
@@ -16,7 +17,7 @@ class Resume extends React.Component {
         <br/>
         <div>
             {/* <embed src={require("../img/Elisabeth_Finkel_resume.pdf")} width="100%" height="500px" type="application/pdf" style={{backgroundColor: "white"}}></embed> */}
-            <img src={require("../img/Elisabeth_Finkel_resume.png")} width="100%" height="auto" alt="Click square to open navigation sidebar."/>
+            <Image src={require("../img/Elisabeth_Finkel_resume.png")} width="100%" style={{maxWidth: "800px"}} height="auto" alt="Resume"/>
         </div>
     </div>
 )

@@ -10,6 +10,7 @@ class Contact extends React.Component {
         <br/>
         <a style={{color: "lightblue"}} href="https://www.linkedin.com/in/elisabeth-f-139074a8">View LinkedIn profile</a>
         <br/>
+        <br/>
         <div>
             <p>Please fill out this form and I will respond at my earliest convenience.</p>
             <br/>
@@ -27,7 +28,7 @@ class Contact extends React.Component {
                     <br/>
                     <div>
                         <label for="message">Enter your message here:</label><br/>
-                        <textarea name="message" cols="80" rows="5" style={{maxWidth: '100%'}}></textarea>
+                        <textarea name="message" cols="80" rows="5" style={{width: "100%", maxWidth: '800px'}}></textarea>
                     </div>
                     <br/>
                     <div>

@@ -18,7 +18,8 @@ class Projects extends React.Component {
     render() {
         return (
             <div>
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossOrigin="anonymous"></link>
+                {/* oops this shouldn't be here: */}
+                {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossOrigin="anonymous"></link> */}
                 <h2>Projects</h2>
                 <p><a style={{color: "lightblue"}} href="https://github.com/esfinkel?tab=repositories">View all repositories</a></p>
                 <br/>
@@ -137,11 +138,22 @@ class MyCard extends React.Component {
         this.setHover(!this.state.isHovering);
     }
 
+    repoUrl() {
+        if (typeof this.props.repo !== 'undefined') return this.props.repo;
+        return this.props.url;
+    }
+
+    clickTapMessage() {
+        return (this.hasMouse ? 'click' : 'tap') + " here for " + (this.state.isHovering ? "less" : "more") + " info"
+    }
+
     render() {
         return (
-            <Card style={{display: "inline-block"}}>
+            // TODO flip logic so "repo" is required and "url" is optional
+            <Card style={{display: "inline-block", minWidth: "150px", margin: "10px"}}>
                 {/* // onMouseEnter={() => this.setHover(true)} onMouseLeave={() => this.setHover(false)}> */}
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossOrigin="anonymous"></link>
+                {/* oops this shouldn't be here: */}
+                {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossOrigin="anonymous"></link> */}
                 <a href={this.props.url} className="quietLink" target="_blank" rel="noopener noreferrer" >
                     {typeof this.props.imgSrc !== 'undefined' &&
                         <div style={{justifyContent: 'center', alignItems: 'center', display: 'flex',}}>
@@ -155,25 +167,17 @@ class MyCard extends React.Component {
                         <div></div>
                     </Card.Body>
                 </a>
-                {(typeof this.props.extra !== 'undefined' || typeof this.props.repo !== 'undefined') && this.state.isHovering &&
+                { this.state.isHovering &&
                     <ListGroup className="list-group-flush">
                         {typeof this.props.extra !== 'undefined' && <ListGroupItem><small>{this.props.extra}</small></ListGroupItem>}
-                        {typeof this.props.repo !== 'undefined' && <ListGroupItem><small><a href={this.props.repo}>View repo</a></small></ListGroupItem>}
+                        <ListGroupItem><small><a href={this.repoUrl()}>View repo</a></small></ListGroupItem>
+                        { typeof this.props.lastUpdated !== 'undefined' &&          
+                            <ListGroupItem><small className="text-muted">Last major update: {this.props.lastUpdated}.</small></ListGroupItem>
+                        }
                     </ListGroup>
                 }
-                <Card.Footer class="card-footer" onClick={this.toggleHover}>
-                    {typeof this.props.lastUpdated !== 'undefined' &&          
-                        <small className="text-muted">Last major update: {this.props.lastUpdated}.</small>
-                    }
-                    {((typeof this.props.extra !== 'undefined' || typeof this.props.repo !== 'undefined') && (!this.hasMouse)) &&
-                        <small className="text-muted"><br/>(tap here for {this.state.isHovering ? 'less' : 'more'} info)</small>
-                    }
-                    {((typeof this.props.extra !== 'undefined' || typeof this.props.repo !== 'undefined') && (this.hasMouse)) &&
-                        <small className="text-muted"><br/>(click here for {this.state.isHovering ? 'less' : 'more'} info)</small>
-                    }
-                    {/* {typeof this.props.lastUpdated == 'undefined' && // If I provide an update date, use that. Otherwise query github. 
-                        <small className="text-muted">Last updated {this.getLastUpdate(this.props.url)}</small>
-                    } */}
+                <Card.Footer className="card-footer" onClick={this.toggleHover}>
+                    <small className="text-muted"> {this.clickTapMessage()} </small>
                 </Card.Footer>
             </Card>
         )

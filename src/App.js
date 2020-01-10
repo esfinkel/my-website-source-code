@@ -37,9 +37,9 @@ class App extends Component {
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
         crossorigin="anonymous"
       />
-      <div>
+      <div id="full-content">
 
-        <Navbar bg="primary" variant="dark">
+        <Navbar bg="primary" variant="dark" style={{ maxWidth: "100%", "overflowY": "hidden" }}>
           <Navbar.Brand href={this.with_params_to_pass("/")}>esfinkel.me</Navbar.Brand>
           <Nav className="mr-auto">
               <Nav.Link href={this.with_params_to_pass("/")}>Home</Nav.Link>
@@ -56,9 +56,10 @@ class App extends Component {
           </Form> */}
         </Navbar>
 
+        <br/>
 
         <div className="App-header">
-          <br/>
+
           <div id="main-content">
             <div id="page-content">
             <Switch>

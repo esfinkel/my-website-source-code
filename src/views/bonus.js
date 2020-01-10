@@ -8,7 +8,7 @@ import Image from 'react-bootstrap/Image';
 class Bonus extends React.Component {
     render() {
       return (
-      <div>
+      <div id="bonus">
         <h2>Bonus</h2>
         <br/>
         <Jumbotron className="jumbotron">
@@ -25,32 +25,46 @@ class Bonus extends React.Component {
                 I played percussion in countless high school ensembles, and was selected to perform in the 2016 and 2017 <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiC356k5NzmAhXtHzQIHQ7OD4kQFjAAegQIAxAB&url=https%3A%2F%2Filmea.org%2Fallstate-links&usg=AOvVaw3iSshBcfPssfg2Nk15iaLG">Illinois All-State ensembles.</a>
                 <br/>
                 My high school <a href="https://www.facebook.com/events/275320722877327/">senior recital</a> is <a href="https://youtu.be/SQkWF9D-paw">still viewable online.<br/>
-                <Image src={require("../img/bonus/recital.jpg")} style={{height: 200}} roundedCircle />
+                <StandardSizedImage src={require("../img/bonus/recital.jpg")} roundedCircle />
                 <br/>
                 </a>
                 At Cornell, I play in the <a href="https://www.cuorchestra.org">Symphony Orchestra</a> and in the Percussion Ensemble. The orchestra's concerts are typically <a href="https://www.cornell.edu/video/contributor/cornell-symphony-orchestra">recorded and posted online</a>. In January 2019, we had the privilege and pleasure of <a href="https://www.youtube.com/watch?v=I1XubPdPIaI&feature=youtu.be&fbclid=IwAR1n4x1kFKvFdOuvZnjaLLUWzGPvNdgIekzveWjoAlIMsxxwbdGlVOb3sBA">performing in Taipei, Taiwan</a> with the Taipei Symphony Orchestra.
                 <br/>
-            <Image src={require("../img/bonus/taipei_symph_reh.jpg")} style={{height: 200}} rounded />
+            <StandardSizedImage src={require("../img/bonus/taipei_symph_reh.jpg")} />
             &nbsp;
-            <Image src={require("../img/bonus/taipei_symph.jpg")} style={{height: 200}} rounded />
+            <StandardSizedImage src={require("../img/bonus/taipei_symph.jpg")} />
         </Jumbotron>
         <Jumbotron className="jumbotron">
             <h3>Pets</h3>
             <p>Our darling Luna currently resides in Evanston, IL, with my parents.</p>
-            <Image src={require("../img/bonus/dog.jpg")} style={{height: 200}} roundedCircle />
+            <StandardSizedImage src={require("../img/bonus/dog.jpg")} roundedCircle />
         </Jumbotron>
         <Jumbotron className="jumbotron">
             <h3>Hobby: conlanging</h3>
             <p>
                 I've been constructing <a href="https://en.wikipedia.org/wiki/Constructed_language">conlangs</a> since at least 2012.
             </p>
-            <Image src={require("../img/bonus/vocab.png")} style={{height: 200}} rounded fluid />
+            <StandardSizedImage src={require("../img/bonus/vocab.png")} fluid />
             &nbsp;
-            <Image src={require("../img/bonus/grammar.png")} style={{height: 200}} rounded />
+            <StandardSizedImage src={require("../img/bonus/grammar.png")} />
         </Jumbotron>
       </div>
     );}
   } 
   
-  export default Bonus;
+
+class StandardSizedImage extends React.Component {
+    render() {
+        return (
+        <Image src={this.props.src} style={{maxHeight: 200, maxWidth: "100%"}}
+            rounded fluid={this.props.fluid} roundedCircle={this.props.roundedCircle} />
+        );
+    }
+}
+
+
+
+export default Bonus;
   
+
+
