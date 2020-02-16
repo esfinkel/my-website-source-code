@@ -39,7 +39,9 @@ class App extends Component {
       />
       <div id="full-content">
 
-        <Navbar bg="primary" variant="dark" style={{ maxWidth: "100%", "overflowY": "hidden" }}>
+        {/* bg="primary" variant="dark" */}
+        {/* <Navbar fixed="top" style={{ maxWidth: "100%", "overflowY": "hidden", "color": "rgb(185, 205, 241)", "background-color": "rgb(22, 80, 189)" }}> */}
+        <Navbar fixed="top" variant="primary" style={{ maxWidth: "100%", "overflowY": "hidden", "backgroundColor": "rgb(185, 205, 241)" }}>
           <Navbar.Brand href={this.with_params_to_pass("/")}>esfinkel.me</Navbar.Brand>
           <Nav className="mr-auto">
               <Nav.Link href={this.with_params_to_pass("/")}>Home</Nav.Link>
@@ -57,21 +59,28 @@ class App extends Component {
         </Navbar>
 
         <br/>
+        <br/>
 
         <div className="App-header">
 
           <div id="main-content">
             <div id="page-content">
-            <Switch>
-              <Route exact path="/" component={Home}/>
-              <Route path="/contact" component={Contact}/>
-              <Route path="/projects" component={Projects}/>
-              <Route path="/resume" component={Resume}/>
-              <Route path="/bonus" component={Bonus}/>
-              <Route component={err}/>
-            </Switch>
+              <Switch>
+                <Route exact path="/" component={Home}/>
+                <Route path="/contact" component={Contact}/>
+                <Route path="/projects" component={Projects}/>
+                <Route path="/resume" component={Resume}/>
+                <Route path="/bonus" component={Bonus}/>
+                <Route component={err}/>
+              </Switch>
+              <br/>
+              <div style={{display: 'grid', height: '100%'}}><img src={botSquiq} alt="Decorative squiggle" style={{width: '100%', maxWidth: '1000px', maxHeight: '50px', margin: 'auto'}} /></div>
+            </div>
             <br/>
-            <div style={{display: 'grid', height: '100%'}}><img src={botSquiq} alt="Decorative squiggle" style={{width: '100%', maxWidth: '1000px', maxHeight: '50px', margin: 'auto'}} /></div>
+            <div>
+              <a href="https://achecker.ca/checker/index.php?uri=referer&gid=WCAG2-AA">
+                <img src="https://achecker.ca/images/icon_W2_aa.jpg" alt="WCAG 2.0 (Level AA)" height="32" width="102" />
+              </a>
             </div>
           </div>
         </div>

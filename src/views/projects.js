@@ -44,7 +44,7 @@ class Projects extends React.Component {
                         />
                         <MyCard
                             url="https://esfinkel.github.io/finkel-peterson-family-tree/"
-                            imgSrc={require("../img/project_cards/Tree.png")}
+                            imgSrc={require("../img/project_cards/Tree.png")} alt="A leafy green tree"
                             title="Family Tree (web app)"
                             text="Interactive family tree for the Finkel-Peterson family."
                             lastUpdated="August 11, 2019"
@@ -53,7 +53,7 @@ class Projects extends React.Component {
                         />
                         <MyCard
                             url="https://github.com/esfinkel/nearest_netprint"
-                            imgSrc={require("../img/project_cards/netprint.png")}
+                            imgSrc={require("../img/project_cards/netprint.png")} alt="Screenshot of Cornell's netprint website"
                             title="Nearest Netprint (Python)"
                             text="Presents users with a list of the nearest open, netprint-enabled printers on Cornell campus."
                             lastUpdated="July 28, 2019"
@@ -61,7 +61,7 @@ class Projects extends React.Component {
                         />
                         <MyCard
                             url="https://github.com/esfinkel/game_of_life"
-                            imgSrc={require("../img/project_cards/game_of_life.png")}
+                            imgSrc={require("../img/project_cards/game_of_life.png")} alt="A 'Game of Life Board': a rectangular grid with some white and some black squares"
                             title="Game of Life"
                             text="Based on the titular mathematical Gedankenexperiment by John Horton Conway."
                             extra='"Each cell is in one of two possible states, alive or dead. Every cell interacts with its eight neighbours..."'
@@ -69,7 +69,7 @@ class Projects extends React.Component {
                         />
                         <MyCard
                             url="https://github.com/esfinkel/Hack-Challenge-Fall-2018"
-                            imgSrc={require("../img/project_cards/app.png")}
+                            imgSrc={require("../img/project_cards/app.png")} alt="A cartoon cell phone"
                             title="CollabIT"
                             text="A social media app for CS students to meet one another."
                             lastUpdated="Dec 19, 2018"
@@ -77,14 +77,14 @@ class Projects extends React.Component {
                         />
                         <MyCard
                             url="https://github.com/esfinkel/n-body-simulator"
-                            imgSrc={require("../img/project_cards/SolarSystem.gif")}
+                            imgSrc={require("../img/project_cards/SolarSystem.gif")} alt="GIF of the planets orbiting the sun"
                             title="n-body simulator"
                             text="Model an arbitrarily complex system of objects acting under the force of gravity."
                             lastUpdated="October 7, 2018"
                         />
                         <MyCard
                             url="https://github.com/esfinkel/n-body-tutorial"
-                            imgSrc={require("../img/project_cards/nbody.jpg")}
+                            imgSrc={require("../img/project_cards/nbody.jpg")} alt="Diagram showing the orbital paths of some dots in three-dimensional space"
                             title="n-body tutorial"
                             text="Tutorial for a simplified version of n-body simulator."
                             lastUpdated="September 1, 2018"
@@ -147,6 +147,11 @@ class MyCard extends React.Component {
         return (this.hasMouse ? 'click' : 'tap') + " here for " + (this.state.isHovering ? "less" : "more") + " info"
     }
 
+    imageAlt(alt) {
+        if (typeof alt !== 'undefined') return alt;
+        return "Screenshot of the project";
+    } 
+
     render() {
         return (
             // TODO flip logic so "repo" is required and "url" is optional
@@ -157,7 +162,7 @@ class MyCard extends React.Component {
                 <a href={this.props.url} className="quietLink" target="_blank" rel="noopener noreferrer" >
                     {typeof this.props.imgSrc !== 'undefined' &&
                         <div style={{justifyContent: 'center', alignItems: 'center', display: 'flex',}}>
-                            <Card.Img variant="top" style={{alignSelf: 'center',}} src={this.props.imgSrc} />
+                            <Card.Img alt={this.imageAlt(this.props.alt)} variant="top" style={{alignSelf: 'center',}} src={this.props.imgSrc} />
                         </div>
                     }
                     <Card.Body style={{padding: "10px"}}>

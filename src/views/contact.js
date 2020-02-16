@@ -28,7 +28,7 @@ class Contact extends React.Component {
                     <br/>
                     <div>
                         <label for="message">Enter your message here:</label><br/>
-                        <textarea name="message" cols="80" rows="5" style={{width: "100%", maxWidth: '800px'}}></textarea>
+                        <textarea name="message" cols="80" rows="5" id="message" style={{width: "100%", maxWidth: '800px'}}></textarea>
                     </div>
                     <br/>
                     <div>
