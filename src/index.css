@@ -19,7 +19,7 @@ code {
 }
 
 #test {
- background-color: rgb(185, 205, 241);
+ background-color: rgb(172, 175, 192);
 }
 
 #home {
@@ -54,6 +54,40 @@ div#page-content {
   margin: auto;
 }
 
+@keyframes rainbow_rotate {
+  0%   {filter: hue-rotate(0deg);}
+  5%   {filter: hue-rotate(36deg);}
+  10%   {filter: hue-rotate(72deg);}
+  15%   {filter: hue-rotate(108deg);}
+  20%   {filter: hue-rotate(144deg);}
+  25%   {filter: hue-rotate(180deg);}
+  30%   {filter: hue-rotate(216deg);} 
+  35%   {filter: hue-rotate(252deg);}
+  40%   {filter: hue-rotate(288deg);}
+  45%   {filter: hue-rotate(324deg);}
+  50%   {filter: hue-rotate(360deg);}
+  55%   {filter: hue-rotate(324deg);}
+  60%   {filter: hue-rotate(288deg);}
+  65%   {filter: hue-rotate(252deg);}
+  70%   {filter: hue-rotate(216deg);} 
+  75%   {filter: hue-rotate(180deg);}
+  80%   {filter: hue-rotate(144deg);}
+  85%   {filter: hue-rotate(108deg);}
+  90%   {filter: hue-rotate(72deg);}
+  95%   {filter: hue-rotate(36deg);}
+  100%   {filter: hue-rotate(0deg);}
+}
+
+#squig {
+  width: 100%;
+  max-width: 1000px;
+  max-height: 50px;
+  margin: auto;
+  animation-name: rainbow_rotate;
+  /* filter: hue-rotate(359deg); */
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
 
 .normlink {
   text-decoration: none;
@@ -106,3 +140,19 @@ a.quietLink {
   max-width: 800px;
   color: black;
 }
+
+
+
+
+/* goodreads embedding; pasted style from their website instructions, so you shouldn't change anything! */
+#gr_challenge_11621 {border: 2px solid #EBE8D5; border-radius:10px; padding: 0px 7px 0px 7px; max-width:250px; min-height: 100px}
+#gr_challenge_progress_body_11621 {font-size: 12px; font-family: georgia,serif;line-height: 18px}
+#gr_challenge_11621 h3 {margin: 4px 0 10px; font-weight: normal; text-align: center}
+#gr_a1 {text-decoration: none; font-family:georgia,serif;font-style:italic; font-size: 1.1em}
+#gr_a2 {float:left; margin-right: 10px; border: 0 none}
+#gr_div1 {width: 100px; margin: 4px 5px 5px 0; float: left; border: 1px solid #382110; height: 8px; overflow: hidden; background-color: #FFF}
+#gr_div2 {width: 40%; background-color: #D7D2C4; float: left}
+#gr_span1 {visibility:hidden}
+#gr_div3 {font-family: arial, verdana, helvetica, sans-serif;font-size:90%}
+#gr_a3 {text-decoration: none; font-size: 10px}
+

@@ -8,7 +8,7 @@ import Projects from './views/projects';
 import Resume from './views/resume';
 import Bonus from './views/bonus';
 import err from './views/e404';
-import botSquiq from './img/squig-horz-blue.png'
+import botSquiq from './img/squig-rainbow-paint.png'
 
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
@@ -29,19 +29,19 @@ class App extends Component {
   render() {
     return (
       <Router>
-        {/* this stylesheet is actually for non-react bootstrap! remember to delete */}
-      {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossOrigin="anonymous"></link> */}
       <link
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       />
       <div id="full-content">
 
         {/* bg="primary" variant="dark" */}
         {/* <Navbar fixed="top" style={{ maxWidth: "100%", "overflowY": "hidden", "color": "rgb(185, 205, 241)", "background-color": "rgb(22, 80, 189)" }}> */}
         <Navbar fixed="top" variant="primary" style={{ maxWidth: "100%", "overflowY": "hidden", "backgroundColor": "rgb(185, 205, 241)" }}>
+        {/* <Navbar fixed="top" style={{ maxWidth: "100%", "overflowY": "hidden", "color": "white", "backgroundColor": "rgb(185, 205, 241)" }}> */}
+          {/* "backgroundColor": "rgb(18, 77, 43)" */}
           <Navbar.Brand href={this.with_params_to_pass("/")}>esfinkel.me</Navbar.Brand>
           <Nav className="mr-auto">
               <Nav.Link href={this.with_params_to_pass("/")}>Home</Nav.Link>
@@ -74,7 +74,7 @@ class App extends Component {
                 <Route component={err}/>
               </Switch>
               <br/>
-              <div style={{display: 'grid', height: '100%'}}><img src={botSquiq} alt="Decorative squiggle" style={{width: '100%', maxWidth: '1000px', maxHeight: '50px', margin: 'auto'}} /></div>
+              <div style={{display: 'grid', height: '100%'}}><img id="squig" src={botSquiq} alt="Decorative squiggle" /></div>
             </div>
             <br/>
             <div>
