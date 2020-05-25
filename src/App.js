@@ -39,8 +39,8 @@ class App extends Component {
 
         {/* bg="primary" variant="dark" */}
         {/* <Navbar fixed="top" style={{ maxWidth: "100%", "overflowY": "hidden", "color": "rgb(185, 205, 241)", "background-color": "rgb(22, 80, 189)" }}> */}
-        <Navbar fixed="top" variant="primary" style={{ maxWidth: "100%", "overflowY": "hidden", "backgroundColor": "rgb(185, 205, 241)" }}>
-        {/* <Navbar fixed="top" style={{ maxWidth: "100%", "overflowY": "hidden", "color": "white", "backgroundColor": "rgb(185, 205, 241)" }}> */}
+        {/* <Navbar fixed="top" variant="primary" style={{ maxWidth: "100%", "overflowY": "hidden", "backgroundColor": "rgb(185, 205, 241)" }}> */}
+        <Navbar fixed="top" variant="primary" className="color-nav">
           {/* "backgroundColor": "rgb(18, 77, 43)" */}
           <Navbar.Brand href={this.with_params_to_pass("/")}>esfinkel.me</Navbar.Brand>
           <Nav className="mr-auto">

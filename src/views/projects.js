@@ -26,6 +26,15 @@ class Projects extends React.Component {
                 <div style={{color: "black"}}>
                     <CardColumns>
                         <MyCard
+                            url="https://sleeptracker-7640d.firebaseapp.com/"
+                            imgSrc={require("../img/project_cards/sleep.png")}
+                            title="Sleep tracker"
+                            text="Web app to track your sleep and see sleep statistics."
+                            lastUpdated="May 24, 2020"
+                            extra="React app. Implemented with a classmate for Trends in Web Development (Info 1998)"
+                            repo="https://github.com/esfinkel/sleep_tracker"
+                        />
+                        <MyCard
                             url="https://github.com/esfinkel/Battleship-2019"
                             imgSrc={require("../img/project_cards/battleship.png")}
                             title="Battleship"
