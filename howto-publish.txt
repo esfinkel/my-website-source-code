@@ -1,0 +1,6 @@
+Edit src
+Then
+npm run deploy
+
+
+npm start to run locally
