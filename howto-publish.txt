@@ -1,6 +1,6 @@
 Edit src
 Then
-npm run deploy
+yarn run deploy (was npm run deploy)
 
 
-npm start to run locally
+"yarn start" to run locally (was npm start)
