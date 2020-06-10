@@ -30,7 +30,7 @@ class Projects extends React.Component {
                             imgSrc={require("../img/project_cards/sleep.png")}
                             title="Sleep tracker"
                             text="Web app to track your sleep and see sleep statistics."
-                            lastUpdated="May 24, 2020"
+                            lastUpdated="June 7, 2020"
                             extra="React app. Implemented with a classmate for Trends in Web Development (Info 1998)"
                             repo="https://github.com/esfinkel/sleep_tracker"
                         />
