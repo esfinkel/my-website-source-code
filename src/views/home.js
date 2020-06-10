@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'react-bootstrap/Image';
 // import { withRouter } from "react-router-dom";
 
 
@@ -16,6 +17,8 @@ class Home extends React.Component {
       <br/>
       <p>Elisabeth Finkel</p>
       <p>B.A. Computer Science May 2021, Cornell University</p>
+      <Image alt="Headshot" src={require("../img/muir_woods.png")} style={{maxHeight: 200, maxWidth: "100%"}}
+            roundedCircle />
     </div>
   );}
 } 
