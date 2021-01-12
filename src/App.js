@@ -7,6 +7,7 @@ import Contact from './views/contact';
 import Projects from './views/projects';
 import Resume from './views/resume';
 import Bonus from './views/bonus';
+// import HowTo from './views/how-to';
 import err from './views/e404';
 import botSquiq from './img/squig-rainbow-paint.png'
 
@@ -35,6 +36,10 @@ class App extends Component {
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
         crossOrigin="anonymous"
       />
+      <link
+            href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css"
+            rel="stylesheet"
+        />
       <div id="full-content">
 
         {/* bg="primary" variant="dark" */}
@@ -49,6 +54,7 @@ class App extends Component {
               <Nav.Link href={this.with_params_to_pass("/projects")}>Projects</Nav.Link>
               <Nav.Link href={this.with_params_to_pass("/resume")}>Resume</Nav.Link>
               <Nav.Link href={this.with_params_to_pass("/bonus")}>Bonus</Nav.Link>
+              {/* <Nav.Link href={this.with_params_to_pass("/how-to")}>Python tutorial</Nav.Link> */}
               {/* <Nav.Link href={this.with_params_to_pass("/err")}>Error (for testing)</Nav.Link> */}
           </Nav>
           {/* search bar! */}
@@ -71,6 +77,11 @@ class App extends Component {
                 <Route path="/projects" component={Projects}/>
                 <Route path="/resume" component={Resume}/>
                 <Route path="/bonus" component={Bonus}/>
+                <Route path='/sleep-tracker' component={() => { 
+                    window.location.href = 'https://sleeptracker-7640d.web.app'; 
+                    return null;
+                }}/>
+                {/* <Route path="/how-to" component={HowTo}/> */}
                 <Route component={err}/>
               </Switch>
               <br/>

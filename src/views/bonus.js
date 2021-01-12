@@ -11,7 +11,7 @@ class Bonus extends React.Component {
         // update Goodreads info on Bonus page
         const script = document.createElement("script");
         script.async = true;
-        script.src = "https://www.goodreads.com/user_challenges/widget/5197829-ellis?challenge_id=11621&v=2";
+        script.src = "https://www.goodreads.com/user_challenges/widget/5197829-ellis?challenge_id=11650&v=2";
         document.body.appendChild(script);
       }
     
@@ -46,7 +46,7 @@ class Bonus extends React.Component {
         </Jumbotron>
         <Jumbotron className="jumbotron">
             <h3>Hobby: reading</h3>
-            <p>I'm an insatiable reader and semi-active <a href="https://www.goodreads.com">Goodreads</a> user. You can see what books I've logged over the last ~8 years, and my reading progress for this year.</p>
+            <p>I'm an insatiable reader and semi-active <a href="https://www.goodreads.com">Goodreads</a> user. You can see what books I've logged over the last ~{(new Date()).getFullYear()-2012} years, and my reading progress for this year.</p>
             <GoodreadsEmbedding />
         </Jumbotron>
         <Jumbotron className="jumbotron">
@@ -71,40 +71,40 @@ class Bonus extends React.Component {
 class GoodreadsEmbedding extends React.Component {
     // see https://www.goodreads.com/user/edit?format=html&tab=widgets
     // with thanks to https://reactgo.com/render-script-tag-component/
-    // accesses external script in componentDidMount
-    // which replaces everything in "gr_challenge_progress..."
-    // just using contents of GoodreadsEmbedding as a default in case updated version not accessible via API
-    // but technically I don't need anything inside of that
+    // JS will access the external script in componentDidMount (above)
+    // which replaces everything in "gr_challenge_progress..." (below)
+    // But does use the contents of GoodreadsEmbedding as a default in case updated version
+    // not accessible via API
+    // So every year, to update: just replace the "script.src" up above with the new widget one
+    // and update the div id "gr_challenge_progress_body_..." below, as well as (if you want)
+    // the data inside it (not the styling)
     render() {
         return (
             <div id="GoodreadsEmbedding">
-                <div id="gr_challenge_11621">
-                    <div id="gr_challenge_progress_body_11621" >
+                <div id="gr_challenge">
+                    <div id="gr_challenge_progress_body_11650">
                         <h3>
-                        <a id="gr_a1" rel="nofollow" href="https://www.goodreads.com/challenges/11621-2020-reading-challenge">2020 Reading Challenge</a>
+                            <a id="gr_a1" rel="nofollow" href="https://www.goodreads.com/challenges/11650-2021-reading-challenge">2021 Reading Challenge</a>
                         </h3>
-                            <div className="challengePic">
-                            <a id="gr_a2" rel="nofollow" href="https://www.goodreads.com/challenges/11621-2020-reading-challenge"><img alt="2020 Reading Challenge" src="https://images.gr-assets.com/challenges/1575497947p2/11621.jpg" /></a>
-                            </div>
+                        <div class="challengePic">
+                          <a id="gr_a2" rel="nofollow" href="https://www.goodreads.com/challenges/11650-2021-reading-challenge"><img alt="2021 Reading Challenge" src="https://images.gr-assets.com/challenges/1608245803p2/11650.jpg" /></a>
+                        </div>
                         <div>
                             <a rel="nofollow" href="https://www.goodreads.com/user/show/5197829-ellis">Elisabeth</a> has
-                                read 4 books toward
-                                their goal of
-                                10 books.
+                                read 3 books toward their goal of 30 books.
                         </div>
                         <div id="gr_div1">
                             <div id="gr_div2"><span id="gr_span1" >hide</span></div>
                         </div>
+
                         <div id="gr_div3">
-                            <a rel="nofollow" href="https://www.goodreads.com/user_challenges/19800366">4 of 10 (40%)</a>
+                            <a rel="nofollow" href="https://www.goodreads.com/user_challenges/26380381">3 of 30 (10%)</a>
                         </div>
                         <div style={{"textAlign": "right"}}>
-                        <a id="gr_a3" rel="nofollow" href="https://www.goodreads.com/user_challenges/19800366">view books</a>
+                            <a id="gr_a3" rel="nofollow" href="https://www.goodreads.com/user_challenges/26380381">view books</a>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         );
     }
