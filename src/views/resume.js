@@ -13,6 +13,7 @@ class Resume extends React.Component {
 
         <h2>Resume</h2>
         <br/>
+        <p>A more recent version can sometimes be found on <a href="https://www.linkedin.com/in/elisabeth-f-139074a8/">my LinkedIn page</a></p>
         <div><a href={require("../img/Elisabeth_Finkel_resume.pdf")} download><button className="download-btn"><i className="fa fa-download"></i> Download PDF</button></a></div>
         <br/>
         <div>

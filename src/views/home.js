@@ -11,8 +11,7 @@ class Home extends React.Component {
       <h2>Home</h2>
       <br/>
       <p>Hello!</p>
-      <p>I'm a computer science student currently attending Cornell University.</p>
-      <p>I have worked largely as a backend developer but also have experience in scripting and full-stack development.</p>
+      <p>I'm a software engineer; I have worked largely as a backend developer but also have experience in scripting and full-stack development.</p>
       <p>I dabble in web design, as you can see - I designed/<wbr/>implemented/<wbr/>wrote this website using React (with a bit of React-Bootstrap).</p>
       <br/>
       <p>Elisabeth Finkel</p>

@@ -31,7 +31,7 @@ class Bonus extends React.Component {
                 <StandardSizedImage alt="Photo of me playing the marimba" src={require("../img/bonus/recital.jpg")} roundedCircle />
                 <br/>
                 </a>
-                At Cornell, I play in the <a href="https://www.cuorchestra.org">Symphony Orchestra</a> and in the Percussion Ensemble. The orchestra's concerts are typically <a href="https://www.cornell.edu/video/contributor/cornell-symphony-orchestra">recorded and posted online</a>. In January 2019, we had the privilege and pleasure of <a href="https://www.youtube.com/watch?v=I1XubPdPIaI&feature=youtu.be&fbclid=IwAR1n4x1kFKvFdOuvZnjaLLUWzGPvNdgIekzveWjoAlIMsxxwbdGlVOb3sBA">performing in Taipei, Taiwan</a> with the Taipei Symphony Orchestra.
+                At Cornell, I played in the <a href="https://www.cuorchestra.org">Symphony Orchestra</a> and in the Percussion Ensemble. The orchestra's concerts are typically <a href="https://www.cornell.edu/video/contributor/cornell-symphony-orchestra">recorded and posted online</a>. In January 2019, we had the privilege and pleasure of <a href="https://www.youtube.com/watch?v=I1XubPdPIaI&feature=youtu.be&fbclid=IwAR1n4x1kFKvFdOuvZnjaLLUWzGPvNdgIekzveWjoAlIMsxxwbdGlVOb3sBA">performing in Taipei, Taiwan</a> with the Taipei Symphony Orchestra.
                 <br/>
             <StandardSizedImage alt="Photo of me playing the timpani" src={require("../img/bonus/taipei_symph_reh.jpg")} />
             &nbsp;

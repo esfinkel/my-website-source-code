@@ -26,6 +26,15 @@ class Projects extends React.Component {
                 <div style={{color: "black"}}>
                     <CardColumns>
                         <MyCard
+                            url="https://bookclub-4300.herokuapp.com"
+                            imgSrc={require("../img/project_cards/bookclub.png")}
+                            title="Book Club"
+                            text="Web app to search for book recommendations for groups."
+                            lastUpdated="May 17, 2021"
+                            extra="Implemented with classmates for Language and Information (CS 4300). Book clubs can input each member's likes/dislikes (books or authors) and filter by genre; they will receive algorithmically-tailored recommendations that attempt to compromise between everyone's preferences. I worked on the backend, which uses Flask. Our raw data was taken from https://sites.google.com/eng.ucsd.edu/ucsdbookgraph/home; due to space constraints, we took a subset of about 17000 of the most popular books. Our algorithm uses similarity scoring that is primarily based on the content of book descriptions and user reviews, and we use techniques like relevance feedback to optimize the results."
+                            repo="https://github.com/kurthueb/cs4300sp2020-krh57-cel243-esf76-jjw249-tz376"
+                        />
+                        <MyCard
                             url="https://sleeptracker-7640d.firebaseapp.com/"
                             imgSrc={require("../img/project_cards/sleep.png")}
                             title="Sleep tracker"
