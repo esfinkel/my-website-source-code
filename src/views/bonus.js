@@ -114,7 +114,7 @@ class GoodreadsEmbedding extends React.Component {
 class StandardSizedImage extends React.Component {
     render() {
         return (
-        <Image alt={this.props.alt} src={this.props.src} style={{maxHeight: 200, maxWidth: "100%"}}
+        <Image alt={this.props.alt} src={this.props.src.default} style={{maxHeight: 200, maxWidth: "100%"}}
             rounded fluid={this.props.fluid} roundedCircle={this.props.roundedCircle} />
         );
     }

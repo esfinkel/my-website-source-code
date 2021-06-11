@@ -88,11 +88,6 @@ class App extends Component {
               <div style={{display: 'grid', height: '100%'}}><img id="squig" src={botSquiq} alt="Decorative squiggle" /></div>
             </div>
             <br/>
-            <div>
-              <a href="https://achecker.ca/checker/index.php?uri=referer&gid=WCAG2-AA">
-                <img src="https://achecker.ca/images/icon_W2_aa.jpg" alt="WCAG 2.0 (Level AA)" height="32" width="102" />
-              </a>
-            </div>
           </div>
         </div>
       </div>

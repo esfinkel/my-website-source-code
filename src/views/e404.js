@@ -13,7 +13,7 @@ class err extends React.Component {
         </p>
         {/* {this.props.location.pathname} */}
         <p></p>
-        <img src={require('../img/page_not_found.png')} style={{maxWidth: '100%'}} alt="example of a 404 error page"></img>
+        <img src={require('../img/page_not_found.png').default} style={{maxWidth: '100%'}} alt="example of a 404 error page"></img>
         <p></p>
         <span className="normlink">
             <a href="https://youtu.be/SQkWF9D-paw" rel="noopener noreferrer" className="quietLink" target="_blank">Looking for </a>

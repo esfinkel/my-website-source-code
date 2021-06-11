@@ -171,7 +171,7 @@ class MyCard extends React.Component {
                 <a href={this.props.url} className="quietLink" target="_blank" rel="noopener noreferrer" >
                     {typeof this.props.imgSrc !== 'undefined' &&
                         <div style={{justifyContent: 'center', alignItems: 'center', display: 'flex',}}>
-                            <Card.Img alt={this.imageAlt(this.props.alt)} variant="top" style={{alignSelf: 'center',}} src={this.props.imgSrc} />
+                            <Card.Img alt={this.imageAlt(this.props.alt)} variant="top" style={{alignSelf: 'center',}} src={this.props.imgSrc.default} />
                         </div>
                     }
                     <Card.Body style={{padding: "10px"}}>

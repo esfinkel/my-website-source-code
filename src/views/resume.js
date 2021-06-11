@@ -17,7 +17,7 @@ class Resume extends React.Component {
         <br/>
         <div>
             {/* <embed src={require("../img/Elisabeth_Finkel_resume.pdf")} width="100%" height="500px" type="application/pdf" style={{backgroundColor: "white"}}></embed> */}
-            <Image alt="My resume; the PDF is downloadable above" src={require("../img/Elisabeth_Finkel_resume.png")} width="100%" style={{maxWidth: "800px"}} height="auto"/>
+            <Image alt="My resume; the PDF is downloadable above" src={require("../img/Elisabeth_Finkel_resume.png").default} width="100%" style={{maxWidth: "800px"}} height="auto"/>
         </div>
     </div>
 )
