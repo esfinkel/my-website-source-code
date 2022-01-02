@@ -14,7 +14,7 @@ class Bonus extends React.Component {
         // update script.src every year
         script.src = "https://www.goodreads.com/user_challenges/widget/5197829-ellis?challenge_id=11636&v=2";
         document.body.appendChild(script);
-      }
+    }
     
 
     render() {
@@ -78,32 +78,15 @@ class GoodreadsEmbedding extends React.Component {
     // not accessible via API
     // So every year, to update: just replace the "script.src" up above with the new widget one
     // and update the div id "gr_challenge_progress_body_..." below, as well as (if you want)
-    // the data inside it (not the styling)
+    // the data inside it
+    // You also may need to update some hardcoded styling and/or tag names in index.css, since React
+    // tends to try to try to overwrite/ignore whatever styling is in the Goodreads script...
     render() {
         return (
             <div id="GoodreadsEmbedding">
                 <div id="gr_challenge">
                     <div id="gr_challenge_progress_body_11636">
-                        <h3>
-                            <a id="gr_a1" rel="nofollow" href="https://www.goodreads.com/challenges/11636-2022-reading-challenge">2022 Reading Challenge</a>
-                        </h3>
-                        <div class="challengePic">
-                          <a id="gr_a2" rel="nofollow" href="https://www.goodreads.com/challenges/11636-2022-reading-challenge"><img alt="2022 Reading Challenge" src="https://images.gr-assets.com/challenges/1636444409p2/11636.jpg" /></a>
-                        </div>
-                        <div>
-                            <a rel="nofollow" href="https://www.goodreads.com/user/show/5197829-ellis">Ellis</a> has
-                                read 0 books toward their goal of 25 books.
-                        </div>
-                        <div id="gr_div1">
-                            <div id="gr_div2"><span id="gr_span1" >hide</span></div>
-                        </div>
-
-                        <div id="gr_div3">
-                            <a rel="nofollow" href="https://www.goodreads.com/user_challenges/31703344">0 of 25 (0%)</a>
-                        </div>
-                        <div style={{"textAlign": "right"}}>
-                            <a id="gr_a3" rel="nofollow" href="https://www.goodreads.com/user_challenges/31703344">view books</a>
-                        </div>
+                        View my 2022 reading challenge on the <a id="gr_a1" rel="nofollow" href="https://www.goodreads.com/challenges/11636-2022-reading-challenge">Goodreads website</a>
                     </div>
                 </div>
             </div>
