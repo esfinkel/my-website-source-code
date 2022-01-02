@@ -11,7 +11,8 @@ class Bonus extends React.Component {
         // update Goodreads info on Bonus page
         const script = document.createElement("script");
         script.async = true;
-        script.src = "https://www.goodreads.com/user_challenges/widget/5197829-ellis?challenge_id=11650&v=2";
+        // update script.src every year
+        script.src = "https://www.goodreads.com/user_challenges/widget/5197829-ellis?challenge_id=11636&v=2";
         document.body.appendChild(script);
       }
     
@@ -82,26 +83,26 @@ class GoodreadsEmbedding extends React.Component {
         return (
             <div id="GoodreadsEmbedding">
                 <div id="gr_challenge">
-                    <div id="gr_challenge_progress_body_11650">
+                    <div id="gr_challenge_progress_body_11636">
                         <h3>
-                            <a id="gr_a1" rel="nofollow" href="https://www.goodreads.com/challenges/11650-2021-reading-challenge">2021 Reading Challenge</a>
+                            <a id="gr_a1" rel="nofollow" href="https://www.goodreads.com/challenges/11636-2022-reading-challenge">2022 Reading Challenge</a>
                         </h3>
                         <div class="challengePic">
-                          <a id="gr_a2" rel="nofollow" href="https://www.goodreads.com/challenges/11650-2021-reading-challenge"><img alt="2021 Reading Challenge" src="https://images.gr-assets.com/challenges/1608245803p2/11650.jpg" /></a>
+                          <a id="gr_a2" rel="nofollow" href="https://www.goodreads.com/challenges/11636-2022-reading-challenge"><img alt="2022 Reading Challenge" src="https://images.gr-assets.com/challenges/1636444409p2/11636.jpg" /></a>
                         </div>
                         <div>
-                            <a rel="nofollow" href="https://www.goodreads.com/user/show/5197829-ellis">Elisabeth</a> has
-                                read 3 books toward their goal of 30 books.
+                            <a rel="nofollow" href="https://www.goodreads.com/user/show/5197829-ellis">Ellis</a> has
+                                read 0 books toward their goal of 25 books.
                         </div>
                         <div id="gr_div1">
                             <div id="gr_div2"><span id="gr_span1" >hide</span></div>
                         </div>
 
                         <div id="gr_div3">
-                            <a rel="nofollow" href="https://www.goodreads.com/user_challenges/26380381">3 of 30 (10%)</a>
+                            <a rel="nofollow" href="https://www.goodreads.com/user_challenges/31703344">0 of 25 (0%)</a>
                         </div>
                         <div style={{"textAlign": "right"}}>
-                            <a id="gr_a3" rel="nofollow" href="https://www.goodreads.com/user_challenges/26380381">view books</a>
+                            <a id="gr_a3" rel="nofollow" href="https://www.goodreads.com/user_challenges/31703344">view books</a>
                         </div>
                     </div>
                 </div>
@@ -123,6 +124,4 @@ class StandardSizedImage extends React.Component {
 
 
 export default Bonus;
-  
-
 
