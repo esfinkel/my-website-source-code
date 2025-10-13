@@ -11,11 +11,12 @@ class Home extends React.Component {
       <h2>Home</h2>
       <br/>
       <p>Hello!</p>
-      <p>I'm a software engineer; I have worked largely as a backend developer but also have experience in scripting and full-stack development.</p>
-      <p>I dabble in web design, as you can see - I designed/<wbr/>implemented/<wbr/>wrote this website using React (with a bit of React-Bootstrap).</p>
+      <p>I'm a software engineer with experience in backend, web, and platform engineering.</p>
+      <p>I'm not a graphic design expert but I dabble. This website was written in React.</p>
       <br/>
-      <p>Elisabeth Finkel</p>
+      <p>Sam Finkel</p>
       <p>B.A. Computer Science May 2021, Cornell University</p>
+      <p>Senior software engineer, Duolingo</p>
       <Image alt="Headshot" src={require("../img/muir_woods.png").default} style={{maxHeight: 200, maxWidth: "100%"}}
             roundedCircle />
       <div>

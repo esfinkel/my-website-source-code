@@ -8,14 +8,14 @@ class Contact extends React.Component {
     <div>
         <h2>Contact</h2>
         <br/>
-        <a style={{color: "lightblue"}} href="https://www.linkedin.com/in/elisabeth-f-139074a8">View LinkedIn profile</a>
+        <a style={{color: "lightblue"}} href="https://www.linkedin.com/in/sam-f-139074a8/">View LinkedIn profile</a>
         <br/>
         <br/>
         <div>
             <p>Please fill out this form and I will respond at my earliest convenience.</p>
             <br/>
             <div id="contact-form">
-                <form action="https://formspree.io/finkelelisabeth@gmail.com" method="POST">
+                <form action="https://formspree.io/samfinkel99@gmail.com" method="POST">
                     <div>
                         <label for="name">Enter your name: </label><br/>
                         <input type="text" name="name" id="name" required/>

@@ -47,7 +47,7 @@ class App extends Component {
         {/* <Navbar fixed="top" variant="primary" style={{ maxWidth: "100%", "overflowY": "hidden", "backgroundColor": "rgb(185, 205, 241)" }}> */}
         <Navbar fixed="top" variant="primary" className="color-nav">
           {/* "backgroundColor": "rgb(18, 77, 43)" */}
-          <Navbar.Brand href={this.with_params_to_pass("/")}>esfinkel.me</Navbar.Brand>
+          <Navbar.Brand href={this.with_params_to_pass("/")}>samfinkel.me</Navbar.Brand>
           <Nav className="mr-auto">
               <Nav.Link href={this.with_params_to_pass("/")}>Home</Nav.Link>
               <Nav.Link href={this.with_params_to_pass("/contact")}>Contact</Nav.Link>
