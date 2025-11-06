@@ -15,7 +15,7 @@ class Contact extends React.Component {
             <p>Please fill out this form and I will respond at my earliest convenience.</p>
             <br/>
             <div id="contact-form">
-                <form action="https://formspree.io/samfinkel99@gmail.com" method="POST">
+                <form action="https://formspree.io/f/manlrjlo" method="POST">
                     <div>
                         <label for="name">Enter your name: </label><br/>
                         <input type="text" name="name" id="name" required/>

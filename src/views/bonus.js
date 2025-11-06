@@ -1,6 +1,6 @@
 import React from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron';
 import Image from 'react-bootstrap/Image';
+import Jumbotron from 'react-bootstrap/Jumbotron';
 
 // todo https://react-bootstrap.github.io/components/accordion/ for organization
 // https://react-bootstrap.github.io/components/progress/ for scroll progress
@@ -12,7 +12,7 @@ class Bonus extends React.Component {
         const script = document.createElement("script");
         script.async = true;
         // update script.src every year
-        script.src = "https://www.goodreads.com/user_challenges/widget/5197829-ellis?challenge_id=11636&v=2";
+        script.src = "https://www.goodreads.com/review/grid_widget/5197829?cover_size=&hide_link=&hide_title=&num_books=20&order=&shelf=&sort=&widget_id=1762391589";
         document.body.appendChild(script);
     }
     
@@ -24,7 +24,7 @@ class Bonus extends React.Component {
         <br/>
         <Jumbotron className="jumbotron">
             <h3>Hobby: music</h3>
-                I'm a hobbyist orchestral percussionist and classical pianist.
+                I perform classical percussion with amateur groups and am a hobbyist classical pianist.
                 <br/>
                 I played percussion in countless high school ensembles, and was selected to perform in the 2016 and 2017 <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiC356k5NzmAhXtHzQIHQ7OD4kQFjAAegQIAxAB&url=https%3A%2F%2Filmea.org%2Fallstate-links&usg=AOvVaw3iSshBcfPssfg2Nk15iaLG">Illinois All-State ensembles.</a>
                 <br/>
@@ -32,7 +32,9 @@ class Bonus extends React.Component {
                 <StandardSizedImage alt="Photo of me playing the marimba" src={require("../img/bonus/recital.jpg")} roundedCircle />
                 <br/>
                 </a>
-                At Cornell, I played in the <a href="https://www.cuorchestra.org">Symphony Orchestra</a> and in the Percussion Ensemble. The orchestra's concerts are typically <a href="https://www.cornell.edu/video/contributor/cornell-symphony-orchestra">recorded and posted online</a>. In January 2019, we had the privilege and pleasure of <a href="https://www.youtube.com/watch?v=I1XubPdPIaI&feature=youtu.be&fbclid=IwAR1n4x1kFKvFdOuvZnjaLLUWzGPvNdgIekzveWjoAlIMsxxwbdGlVOb3sBA">performing in Taipei, Taiwan</a> with the Taipei Symphony Orchestra.
+                At Cornell, I played in the <a href="https://www.cuorchestra.org">Symphony Orchestra</a> and in the Percussion Ensemble. In January 2019, we had the privilege and pleasure of <a href="https://www.youtube.com/watch?v=I1XubPdPIaI&feature=youtu.be&fbclid=IwAR1n4x1kFKvFdOuvZnjaLLUWzGPvNdgIekzveWjoAlIMsxxwbdGlVOb3sBA">performing in Taipei, Taiwan</a> with the Taipei Symphony Orchestra.
+                <br/>
+                Now in Pittsburgh, I play in the Edgewood Symphony Orchestra and one of the Carnegie Mellon orchestras.
                 <br/>
             <StandardSizedImage alt="Photo of me playing the timpani" src={require("../img/bonus/taipei_symph_reh.jpg")} />
             &nbsp;
@@ -71,23 +73,11 @@ class Bonus extends React.Component {
 
 class GoodreadsEmbedding extends React.Component {
     // see https://www.goodreads.com/user/edit?format=html&tab=widgets
-    // with thanks to https://reactgo.com/render-script-tag-component/
-    // JS will access the external script in componentDidMount (above)
-    // which replaces everything in "gr_challenge_progress..." (below)
-    // But does use the contents of GoodreadsEmbedding as a default in case updated version
-    // not accessible via API
-    // So every year, to update: just replace the "script.src" up above with the new widget one
-    // and update the div id "gr_challenge_progress_body_..." below, as well as (if you want)
-    // the data inside it
-    // You also may need to update some hardcoded styling and/or tag names in index.css, since React
-    // tends to try to try to overwrite/ignore whatever styling is in the Goodreads script...
     render() {
         return (
             <div id="GoodreadsEmbedding">
-                <div id="gr_challenge">
-                    <div id="gr_challenge_progress_body_11636">
-                        View my 2022 reading challenge on the <a id="gr_a1" rel="nofollow" href="https://www.goodreads.com/challenges/11636-2022-reading-challenge">Goodreads website</a>
-                    </div>
+                <div id="gr_grid_widget_1762391589">
+                    View my reading progress at <a href="https://www.goodreads.com/user/show/5197829-sam">Goodreads</a>.
                 </div>
             </div>
         );

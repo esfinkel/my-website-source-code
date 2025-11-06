@@ -17,9 +17,9 @@ class Home extends React.Component {
       <p>Sam Finkel</p>
       <p>B.A. Computer Science May 2021, Cornell University</p>
       <p>Senior software engineer, Duolingo</p>
-      <Image alt="Headshot" src={require("../img/muir_woods.png").default} style={{maxHeight: 200, maxWidth: "100%"}}
+      <Image alt="Headshot" src={require("../img/books_photo.png").default} style={{maxHeight: 200, maxWidth: "100%"}}
             roundedCircle />
-      <div>
+      <div style={{height: "54px"}}>
         <a style={{float: "right"}} href={require("../img/privacy_policy.pdf").default} download><button className="download-btn"><i className="fa fa-download"></i> Download Privacy Policy</button></a>
       </div>
 
